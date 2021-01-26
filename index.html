@@ -17,7 +17,7 @@
     <br>
     <input type="password" class="form-control" name="" id="" placeholder="Password">
     <br>
-    <button class="btn btn-success">Submit</button>
+    <button id="submit" class="btn btn-success">Submit</button>
 
 
 
@@ -26,6 +26,11 @@
 
 
 
+
+</div>
+
+<div id="transaction">
+    <h2>Transaction Area</h2>
 
 </div>
 
@@ -41,9 +46,27 @@
 
 
 
+  <script>
+
+ var loginBtn=document.getElementById("submit");
+ loginBtn.addEventListener("click",function(){
+  var loginArea=document.getElementById("login-area");
+  loginArea.style.display="none";
+
+ const transAction=document.getElementById("transaction");
+ transAction.style.display="block";
+
+ });
 
 
 
+
+
+
+
+
+
+  </script>
 
 
 
