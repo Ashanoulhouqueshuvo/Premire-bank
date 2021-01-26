@@ -104,31 +104,41 @@
   depositBtn.addEventListener("click",function(){
       const depositAmount=document.getElementById("depositAmount").value;
       const depositNumber=parseFloat(depositAmount);
-     const currentDeposit=document.getElementById("currentDeposit").innerText;
-     const currentDepositNumber=parseFloat(currentDeposit);
-     const TotalDeposit=depositNumber+currentDepositNumber;
+
+
+
+    // const currentDeposit=document.getElementById("currentDeposit").innerText;
+     //const currentDepositNumber=parseFloat(currentDeposit);
+     //const TotalDeposit=depositNumber+currentDepositNumber;
      //console.log(TotalDeposit);
-     document.getElementById("currentDeposit").innerText=TotalDeposit;
+     //document.getElementById("currentDeposit").innerText=TotalDeposit;
 
-     const currentBalance=document.getElementById("currentBalance").innerText;
-     const mainBalance=parseFloat(currentBalance);
-     const totalBalance=depositNumber+mainBalance;
-     document.getElementById("currentBalance").innerText=totalBalance;
+     
 
 
 
 
 
 
+     updateSpanText("currentBalance",depositNumber);
+     updateSpanText("currentDeposit",depositNumber);
 
      document.getElementById("depositAmount").value="";
     
 
 
-
+    //updateSpanText("currentBalance");
 
 
   })
+  function updateSpanText(id,depositNumber)
+  {
+    const currentBalance=document.getElementById(id).innerText;
+     const mainBalance=parseFloat(currentBalance);
+     const totalBalance=depositNumber+mainBalance;
+     document.getElementById(id).innerText=totalBalance;
+
+  }
 
 
 
